@@ -1,0 +1,131 @@
+#!/bin/bash
+
+####################################################################################################
+#                                                                                                  #
+#  CC-BY-NC License v4.0                                                                           #
+#                                                                                                  #
+#  Copyright (c) 2025 Roberto Chichiarelli "Robic"                                                 #
+#  Created by Roberto Chichiarelli                                                                 #
+#  GitHub: https://github.com/Rob1c                                                                #
+#  Development period: July – September 2025                                                       #
+#                                                                                                  #
+#  Any violation of the license terms may result                                                   #
+#  in termination of rights granted under this license.                                            #
+#                                                                                                  #
+#  For commercial licensing inquiries, contact: roberto.chichiarelli@gmail.com                     #
+#                                                                                                  #
+####################################################################################################
+
+
+# Choose format (audio or video)
+choose_format() {
+  echo "Write desired format:"
+  echo "Audio: mp3, m4a, opus, flac, wav"
+  echo "Video: mp4, webm"
+  read -r -p "Format? (default: mp4): " format
+  format=${format:-mp4}
+
+  case "$format" in
+    mp3|m4a|opus|flac|wav)
+      type="audio"
+      ;;
+    mp4|webm)
+      type="video"
+      ;;
+    *)
+      read -r -p "Not a valid format. Do you want to use mp4? [Y/n]: " answer
+      if [[ "$answer" =~ ^[nN] ]]; then
+        choose_format
+      else
+        format="mp4"
+        type="video"
+      fi
+      ;;
+  esac
+}
+
+# Sanitize folder name
+sanitize_name() {
+  echo "$1" | tr -d '\n' | sed 's/[\/:*?"<>|]/_/g; s/^[[:space:]]\+//; s/[[:space:]]\+$//; s/[[:space:]]\+/_/g'
+}
+
+# Main loop
+main_loop() {
+  read -r -p "Insert URL here: " url
+  choose_format
+
+  is_playlist=false
+  if [[ "$url" == *list* ]]; then
+    read -r -p "This URL refers to a list, do you want to download the whole list? [Y/N]: " answer
+    if [[ "$answer" =~ ^[nN] ]]; then
+      url="${url%%list*}"
+      echo "Modified URL: $url"
+    else
+      is_playlist=true
+    fi
+  fi
+
+  # Base work directory
+  base_dir="$HOME/Termyt"
+  mkdir -p "$base_dir"
+
+  # Get title
+  if $is_playlist; then
+    base_name=$(yt-dlp --print "%(playlist_title)s" --playlist-items 1 --no-warnings "$url")
+  else
+    base_name=$(yt-dlp --print "%(title)s" --no-warnings "$url")
+  fi
+
+  if [ -z "$base_name" ] || [ "$base_name" == "NA" ]; then
+    base_name="Downloads"
+  fi
+
+  safe_base_name=$(sanitize_name "$base_name")
+
+  # Final folder path
+  if [[ "$type" == "audio" ]]; then
+    final_folder="$base_dir/Audio/$safe_base_name"
+  else
+    final_folder="$base_dir/Video/$safe_base_name"
+  fi
+
+  mkdir -p "$final_folder"
+  cd "$final_folder" || { echo "ERROR: Cannot access $final_folder"; exit 1; }
+
+  echo "Downloading in: $final_folder"
+
+  if [[ "$type" == "audio" ]]; then
+    yt-dlp \
+      --yes-playlist \
+      -f "bestaudio[acodec!=none]/best" \
+      -x \
+      --audio-format "$format" \
+      --audio-quality 0 \
+      --no-warnings \
+      --output "%(title)s.%(ext)s" \
+      "$url"
+  else
+    yt-dlp \
+      --yes-playlist \
+      -f "bestvideo[ext=$format]+bestaudio/best[ext=$format]/best" \
+      --merge-output-format "$format" \
+      --no-warnings \
+      --output "%(title)s.%(ext)s" \
+      "$url"
+  fi
+
+  echo "Saved in: $final_folder"
+}
+
+# Loop until user exits
+while true; do
+  main_loop
+  echo
+  read -r -p "Do you want to download another video or playlist? [Y/N]: " again
+  if [[ "$again" =~ ^[nN] ]]; then
+    echo "See you soon!"
+    break
+  fi
+  echo "Restarting..."
+done
+
