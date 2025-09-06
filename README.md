@@ -5,6 +5,7 @@ Termyt is a CLI tool for downloading audio and videos from streaming sites like 
  
 Protected by CC-BY-NC License 4.0 (see License at bottom)
 
+Note: the README.md files in the auto-generated source codes .zip and .tar.gz are wrong, but everything else is correct. Hope Github fixes this!
 
 ## Installation
 ## Linux
