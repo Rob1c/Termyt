@@ -88,5 +88,5 @@ Got error: HTTP Error 403: Forbidden
 For support, feel free to email! roberto.chichiarelli@gmail.com 
 
 
-![Enjoy Termyt!](/assets/icons/logo_whtbkg.png)
+![Enjoy Termyt!](logo_whtbkg.png)
 
