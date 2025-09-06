@@ -3,7 +3,7 @@
 
 Termyt is a CLI tool for downloading audio and videos from streaming sites like YouTube, yt-dlp based 
  
-Protected by Robic License 1.0 (see License at bottom)
+Protected by CC-BY-NC License 4.0 (see License at bottom)
 
 
 ## Installation
@@ -58,29 +58,19 @@ roberto.chichiarelli@gmail.com.
 
 ## License
 
-Robic Public License v1.0
+                                                            
+CC-BY-NC License v4.0 
 
-Copyright (c) 2025 Roberto Chichiarelli 
+Termyt (c) v1.0
+                                                                                                    
+Copyright (c) 2025 Roberto Chichiarelli "Robic"                                                  
+Created by Roberto Chichiarelli                                                                  
+GitHub: https://github.com/Rob1c                                                                 
+Development period: July – September 2025                                                        
 
-"Robic" Created by Roberto Chichiarelli 
-
-GitHub: https://github.com/Rob1c
-
-Development period: July – September 2025
-
-Permission is hereby granted to any person to use, copy, modify, and distribute this software and its source code for personal, educational, or non-commercial purposes, provided that:
-
-The original author is credited in all copies and derivative works.
-
-The source code must remain accessible and included with any distribution.
-
-Commercial use — including but not limited to selling, monetizing via ads, donations, or bundling with paid services — is strictly prohibited for anyone other than the author.
-
-The original author retains full rights to monetize, license, or relicense this software.
-
-This software is provided "as is", without warranty of any kind.
-
-Any violation of these terms may result in termination of rights granted under this license.
+Any violation of these terms may result in termination of rights granted under this license.    
+                                                                                                  
+For commercial licensing inquiries, contact: roberto.chichiarelli@gmail.com
 
 ## Troubleshooting
 
