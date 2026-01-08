@@ -62,12 +62,12 @@ roberto.chichiarelli@gmail.com.
                                                             
 CC-BY-NC License v4.0 
 
-Termyt (c) v1.0
+Termyt (c)
                                                                                                     
 Copyright (c) 2025 Roberto Chichiarelli "Robic"                                                  
 Created by Roberto Chichiarelli                                                                  
 GitHub: https://github.com/Rob1c                                                                 
-Development period: July – September 2025                                                        
+Development period: July – September 2025                                                      
 
 Any violation of these terms may result in termination of rights granted under this license.    
                                                                                                   
