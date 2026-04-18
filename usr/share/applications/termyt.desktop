@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Termyt
+Name[it_IT]=Termyt
+Comment=CLI wrapper for yt-dlp to download videos and audio
+Comment[it_IT]=Interfaccia riga di comando per yt-dlp per scaricare video e audio
+Exec=termyt
+Icon=termyt
+Terminal=true
+Type=Application
+Categories=Network;Video;Utility;
+Keywords=youtube;download;video;audio;yt-dlp;
+StartupNotify=true

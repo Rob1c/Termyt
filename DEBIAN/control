@@ -1,0 +1,10 @@
+Package: termyt
+Version: 1.0.0
+Architecture: all
+Maintainer: Roberto Chichiarelli (Robic) <https://github.com/Rob1c>
+Depends: yt-dlp, ffmpeg, curl
+Priority: optional 
+Section: devel
+Description:CA powerful CLI wrapper for yt-dlp written in Shell.
+ Termyt simplifies downloading videos and audio from YouTube
+ using a user-friendly command-line interface. (CC-BY-NC-4.0)
