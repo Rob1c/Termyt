@@ -1,6 +1,8 @@
 
 # Termyt©
 
+![Termyt is Easy!](https://github.com/Rob1c/Termyt/blob/main/logo-whtbkg.png)
+
 Termyt is a CLI tool for downloading audio and videos from streaming sites like YouTube, yt-dlp based 
  
 Protected by CC-BY-NC License 4.0 (see License at bottom)
