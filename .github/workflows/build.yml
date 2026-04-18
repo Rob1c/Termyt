@@ -1,0 +1,40 @@
+- name: Build Debian Package
+        run: |
+          mkdir -p build/DEBIAN
+          cp -r usr build/
+          cp DEBIAN/* build/DEBIAN/
+
+          chmod +x build/usr/bin/termyt
+          chmod +x build/DEBIAN/postinst || true
+          chmod +x build/DEBIAN/postrm || true
+
+          dpkg-deb --build build termyt_1.0.0_all.deb
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Debian Package
+        run: |
+          mkdir -p build/DEBIAN
+
+          cp -r usr build/
+
+          cp DEBIAN/control build/DEBIAN/
+
+          chmod +x build/usr/bin/termyt
+          chmod 644 build/usr/share/applications/termyt.desktop
+
+          dpkg-deb --build build termyt_1.0.0_all.deb
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: termyt-deb
+          path: termyt_1.0.0_all.deb
