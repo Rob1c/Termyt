@@ -1,0 +1,11 @@
+*.deb
+*.zip
+*.tar.gz
+*.7z
+
+build/
+obj/
+
+.DS_Store
+*~
+*.swp
