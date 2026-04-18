@@ -1,14 +1,5 @@
-- name: Build Debian Package
-        run: |
-          mkdir -p build/DEBIAN
-          cp -r usr build/
-          cp DEBIAN/* build/DEBIAN/
+name: Build Termyt Release
 
-          chmod +x build/usr/bin/termyt
-          chmod +x build/DEBIAN/postinst || true
-          chmod +x build/DEBIAN/postrm || true
-
-          dpkg-deb --build build termyt_1.0.0_all.deb
 on:
   push:
     branches: [ "main" ]
@@ -26,9 +17,11 @@ jobs:
 
           cp -r usr build/
 
-          cp DEBIAN/control build/DEBIAN/
+          cp DEBIAN/* build/DEBIAN/
 
           chmod +x build/usr/bin/termyt
+          chmod +x build/DEBIAN/postinst || true
+          chmod +x build/DEBIAN/postrm || true
           chmod 644 build/usr/share/applications/termyt.desktop
 
           dpkg-deb --build build termyt_1.0.0_all.deb
