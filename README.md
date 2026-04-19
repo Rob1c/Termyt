@@ -6,7 +6,6 @@
         <img src="https://github.com/Rob1c/Termyt/actions/workflows/build.yml/badge.svg" alt="Build Status">
       </a>
       <img src="https://img.shields.io/badge/version-1.0.0-blue" alt="Version">
-      <img src="https://img.shields.io/badge/platform-Windows%20|%20Linux%20" alt="Platform">
       <img src="https://img.shields.io/badge/-Windows-0078D6?logo=windows&logoColor=white" alt="Windows">
       <img src="https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black" alt="Linux">
    </td>
