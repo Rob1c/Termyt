@@ -1,8 +1,9 @@
-
-# Termyt© , - Easy Video and Audio Downloader for Linux & Windows 
-## Powered by yt-dlp
+# Termyt© , Easy Video and Audio Downloader for Linux & Windows 
 
 ![Termyt is Easy!](usr/share/pixmaps/logo-whtbkg.png)
+
+
+## Powered by yt-dlp
 
 Termyt is a CLI tool for downloading audio and videos from streaming sites like YouTube, yt-dlp based 
  
