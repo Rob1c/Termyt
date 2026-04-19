@@ -5,11 +5,11 @@
       <a href="https://github.com/Rob1c/Termyt/actions">
         <img src="https://github.com/Rob1c/Termyt/actions/workflows/build.yml/badge.svg" alt="Build Status">
       </a>
-      <img src="https://img.shields.io/badge/version-1.0.0-D70A53?style=flat&logo=debian&logoColor=white" alt="Version">
-      <img src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" alt="License">
-      <img src="https://img.shields.io/badge/platform-Debian%20|%20Ubuntu-orange" alt="Platform">
-      <img src="https://img.shields.io/badge/arch-amd64-lightgrey" alt="Architecture">
-    </td>
+      <img src="https://img.shields.io/badge/version-1.0.0-blue" alt="Version">
+      <img src="https://img.shields.io/badge/platform-Windows%20|%20Linux%20|%20macOS-lightgrey" alt="Platform">
+      <img src="https://img.shields.io/badge/-Windows-0078D6?logo=windows&logoColor=white" alt="Windows">
+      <img src="https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black" alt="Linux">
+      <img src="https://img.shields.io/badge/-macOS-000000?logo=apple&logoColor=white" alt="macOS"></td>
   </tr>
 </table>
 
