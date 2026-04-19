@@ -1,7 +1,7 @@
 
 # Termyt©
 
-![Termyt is Easy!](https://github.com/Rob1c/Termyt/blob/main/logo-whtbkg.png)
+![Termyt is Easy!](https://github.com/Rob1c/Termyt/blob/main/usr/share/pixmaps/logo-whtbkg.png)
 
 Termyt is a CLI tool for downloading audio and videos from streaming sites like YouTube, yt-dlp based 
  
@@ -15,7 +15,7 @@ Note: the README.md files in the auto-generated source codes .zip and .tar.gz ar
 You can start Termyt immediately by executing the main code, after unpacking the tarball: 
 
 ```bash
-  tar -xvzf termyt-v<version>.tar.gz
+  tar -xvzf termyt_<VERSION>.tar.gz
   cd termyt/opt/termyt
   chmod +x termyt
   ./termyt
@@ -25,7 +25,7 @@ You can start Termyt immediately by executing the main code, after unpacking the
 
 On debian-based systems, you can download the .deb package and consequently be able to run Termyt anywhere, even having the icon (.desktop file). 
 ```bash
-  sudo apt install ./termyt-v<version>.deb
+  sudo apt install ./termyt_<VERSION>.deb
 ```
 Note: "./" before the .deb package, indicates to apt that the package you want to install is local (your PC), and not from a repository!
 ## Windows
@@ -45,7 +45,7 @@ To uninstall Termyt on Linux and Windows (you won't need it!), simply delete the
 To uninstall Termyt on Debian-based systems, simply reverse the installation process:
 
 ```bash
-sudo apt remove ./termyt-v<version>.deb 
+sudo apt remove ./termyt_<VERSION>.deb 
 ```
 ## Authors
 
@@ -66,19 +66,19 @@ CC-BY-NC License v4.0
 
 Termyt (c)
                                                                                                     
-Copyright (c) 2025 Roberto Chichiarelli "Robic"                                                  
-Created by Roberto Chichiarelli                                                                  
-GitHub: https://github.com/Rob1c                                                                 
-Development period: July – September 2025                                                      
+Copyright (c) 2026 Roberto Chichiarelli "Robic"
+Created by Roberto Chichiarelli
+GitHub: https://github.com/Rob1c
+Development period: July 2025 –
 
-Any violation of these terms may result in termination of rights granted under this license.    
+Any violation of these terms may result in termination of rights granted under this license.
                                                                                                   
 For commercial licensing inquiries, contact: roberto.chichiarelli@gmail.com
 
 ## Troubleshooting
 
 ### Issue 1.0
-Since the program is so simple today, fortunately there is only one known common problem. It manifests itself as follows:
+Since the program is so simple today, fortunately there is only one known common problem. It manifests itself as follows (or similar, given the continuous updating of yt-dlp):
 ```bash
 ERROR: fragment 1 not found, unable to continue [download]
 Got error: HTTP Error 403: Forbidden
@@ -91,5 +91,5 @@ Got error: HTTP Error 403: Forbidden
 For support, feel free to email! roberto.chichiarelli@gmail.com 
 
 
-![Enjoy Termyt!](https://github.com/Rob1c/Termyt/blob/main/logo-whtbkg.png)
+![Enjoy Termyt!](https://github.com/Rob1c/Termyt/blob/main/usr/share/pixmaps/logo-whtbkg.png)
 
