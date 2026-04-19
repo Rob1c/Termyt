@@ -17,7 +17,7 @@ jobs:
       - name: Read Version from Control File
         id: pkg_info
         run: |
-          # Legge la versione dal file control per nominare bene i file
+          # reading  ver
           VERSION=$(grep -i '^Version:' DEBIAN/control | awk '{print $2}')
           echo "VERSION=$VERSION" >> $GITHUB_ENV
 
@@ -33,18 +33,17 @@ jobs:
           chmod +x build/DEBIAN/postrm || true
           chmod 644 build/usr/share/applications/termyt.desktop
 
-          # Costruisce il file .deb
           dpkg-deb --build build termyt_${{ env.VERSION }}_all.deb
 
       - name: Build Binary Archives (Zip & Tar.gz)
         run: |
-          # Comprime solo la cartella 'usr' che contiene il programma pronto all'uso
+          # compress usr folder
           zip -r termyt_${{ env.VERSION }}.zip usr/
           tar -czvf termyt_${{ env.VERSION }}.tar.gz usr/
 
       - name: Build Source Code Archives
         run: |
-          # Usa git archive per creare pacchetti sorgente perfetti e puliti
+          # uses git archive for creating packages
           git archive --format=zip --output=termyt_${{ env.VERSION }}_source.zip HEAD
           git archive --format=tar.gz --output=termyt_${{ env.VERSION }}_source.tar.gz HEAD
 
