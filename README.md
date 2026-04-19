@@ -16,7 +16,7 @@ You can start Termyt immediately by executing the main code, after unpacking the
 
 ```bash
   tar -xvzf termyt_<VERSION>.tar.gz
-  cd termyt/opt/termyt
+  cd termyt/usr/bin
   chmod +x termyt
   ./termyt
   
@@ -37,14 +37,14 @@ Once you installed Git for Windows, extract the .zip file, access termyt/opt/ter
 
 ## How to Uninstall
 ## Linux ad Windows
-Have you ever seen these two together? Well, this is one of Termyt's many magical features!
 
 To uninstall Termyt on Linux and Windows (you won't need it!), simply delete the main folder where you ran the program.
 
 ## Debian-based systems
-To uninstall Termyt on Debian-based systems, simply reverse the installation process:
+If you installed Termyt on Debian-based systems using the .deb package, simply reverse the installation process:
 
 ```bash
+cd </folder/containing/the/termyt/deb>
 sudo apt remove ./termyt_<VERSION>.deb 
 ```
 ## Authors
