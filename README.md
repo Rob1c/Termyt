@@ -1,7 +1,7 @@
 
 # Termyt©
 
-![Termyt is Easy!](https://github.com/Rob1c/Termyt/blob/main/usr/share/pixmaps/logo-whtbkg.png)
+![Termyt is Easy!](usr/share/pixmaps/logo-whtbkg.png)
 
 Termyt is a CLI tool for downloading audio and videos from streaming sites like YouTube, yt-dlp based 
  
@@ -33,7 +33,7 @@ For executing Termyt in Windows, you require two simple dependencies:
 1. yt-dlp, which is included in the Termyt folder (for updating yt-dlp, simply download the latest .exe from the [yt-dlp page](https://github.com/yt-dlp/yt-dlp))
 2. Git for Windows, which consents you to execute Shell Scripts (.sh) which are UNIX/Linux native. 
 \
-Once you installed Git for Windows, extract the .zip file, access termyt/opt/termyt , ensure that "termyt" is executable by checking the relative checkbox in the file's properties, and you're ready to go!
+Once you installed Git for Windows, extract the .zip file, access termyt/usr/bin , ensure that "termyt" is executable by checking the relative checkbox in the file's properties, and you're ready to go!
 
 ## How to Uninstall
 ## Linux ad Windows
@@ -44,8 +44,7 @@ To uninstall Termyt on Linux and Windows (you won't need it!), simply delete the
 If you installed Termyt on Debian-based systems using the .deb package, simply reverse the installation process:
 
 ```bash
-cd </folder/containing/the/termyt/deb>
-sudo apt remove ./termyt_<VERSION>.deb 
+sudo apt remove termyt
 ```
 ## Authors
 
@@ -91,5 +90,5 @@ Got error: HTTP Error 403: Forbidden
 For support, feel free to email! roberto.chichiarelli@gmail.com 
 
 
-![Enjoy Termyt!](https://github.com/Rob1c/Termyt/blob/main/usr/share/pixmaps/logo-whtbkg.png)
+![Enjoy Termyt!](usr/share/pixmaps/logo-whtbkg.png)
 
