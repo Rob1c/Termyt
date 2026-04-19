@@ -1,4 +1,4 @@
-name: Build Termyt Release
+name: Build Termyt Artifacts
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -14,12 +14,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Read Version from Control File
+        id: pkg_info
+        run: |
+          # Legge la versione dal file control per nominare bene i file
+          VERSION=$(grep -i '^Version:' DEBIAN/control | awk '{print $2}')
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
       - name: Build Debian Package
         run: |
           mkdir -p build/DEBIAN
 
           cp -r usr build/
-
           cp DEBIAN/* build/DEBIAN/
 
           chmod +x build/usr/bin/termyt
@@ -27,10 +33,26 @@ jobs:
           chmod +x build/DEBIAN/postrm || true
           chmod 644 build/usr/share/applications/termyt.desktop
 
-          dpkg-deb --build build termyt_1.0.0_all.deb
+          # Costruisce il file .deb
+          dpkg-deb --build build termyt_${{ env.VERSION }}_all.deb
 
-      - name: Upload Artifact
+      - name: Build Binary Archives (Zip & Tar.gz)
+        run: |
+          # Comprime solo la cartella 'usr' che contiene il programma pronto all'uso
+          zip -r termyt_${{ env.VERSION }}.zip usr/
+          tar -czvf termyt_${{ env.VERSION }}.tar.gz usr/
+
+      - name: Build Source Code Archives
+        run: |
+          # Usa git archive per creare pacchetti sorgente perfetti e puliti
+          git archive --format=zip --output=termyt_${{ env.VERSION }}_source.zip HEAD
+          git archive --format=tar.gz --output=termyt_${{ env.VERSION }}_source.tar.gz HEAD
+
+      - name: Upload All Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: termyt-deb
-          path: termyt_1.0.0_all.deb
+          name: termyt-artifacts-v${{ env.VERSION }}
+          path: |
+            *.deb
+            *.zip
+            *.tar.gz
