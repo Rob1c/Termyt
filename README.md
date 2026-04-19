@@ -1,5 +1,6 @@
 
-# Termyt©
+# Termyt© , - Easy Video and Audio Downloader for Linux & Windows 
+## Powered by yt-dlp
 
 ![Termyt is Easy!](usr/share/pixmaps/logo-whtbkg.png)
 
@@ -19,7 +20,6 @@ You can start Termyt immediately by executing the main code, after unpacking the
   cd termyt/usr/bin
   chmod +x termyt
   ./termyt
-  
 ```
 ## Debian-based systems
 
