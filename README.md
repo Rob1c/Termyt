@@ -1,7 +1,22 @@
-# Termyt© , Easy Video and Audio Downloader for Linux & Windows 
+<table>
+  <tr>
+    <td width="120">
+      <img src="usr/share/pixmaps/logo-whtbkg.png" width="120" alt="Termyt Logo">
+    </td>
+    <td>
+      <h1>Termyt© , Easy Video and Audio Downloader for Linux & Windows</h1>
+      <a href="https://github.com/Rob1c/Termyt/actions">
+        <img src="https://github.com/Rob1c/Termyt/actions/workflows/build.yml/badge.svg" alt="Build Status">
+      </a>
+      <img src="https://img.shields.io/badge/version-1.0.0-D70A53?style=flat&logo=debian&logoColor=white" alt="Version">
+      <img src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" alt="License">
+      <img src="https://img.shields.io/badge/platform-Debian%20|%20Ubuntu-orange" alt="Platform">
+      <img src="https://img.shields.io/badge/arch-amd64-lightgrey" alt="Architecture">
+    </td>
+  </tr>
+</table>
 
-![Termyt is Easy!](usr/share/pixmaps/logo-whtbkg.png)
-
+---
 
 ## Powered by yt-dlp
 
