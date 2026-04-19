@@ -1,8 +1,5 @@
 <table>
   <tr>
-    <td width="120">
-      <img src="usr/share/pixmaps/logo-whtbkg.png" width="120" alt="Termyt Logo">
-    </td>
     <td>
       <h1>Termyt© , Easy Video and Audio Downloader for Linux & Windows</h1>
       <a href="https://github.com/Rob1c/Termyt/actions">
@@ -17,6 +14,9 @@
 </table>
 
 ---
+
+![](usr/share/pixmaps/logo-whtbkg.png)
+
 
 ## Powered by yt-dlp
 
